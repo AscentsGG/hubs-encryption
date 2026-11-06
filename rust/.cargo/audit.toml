@@ -1,0 +1,14 @@
+# Settings for `cargo audit` in this workspace.
+
+[advisories]
+# RUSTSEC-2026-0387: timing variability in crypto-bigint 0.5.5.
+#
+# crypto-bigint comes in only through elliptic-curve, for the p256 and p384
+# crates that mls-rs-crypto-rustcrypto 0.22.1 always depends on. Those curves
+# serve the NIST ciphersuites. Hubs uses ciphersuite 1 only (X25519,
+# AES-128-GCM, SHA-256, Ed25519): hubs-mls and hubs-mls-ffi build their
+# crypto provider with `with_enabled_cipher_suites(vec![CIPHER_SUITE])`, so
+# no P-256 or P-384 operation, and no crypto-bigint arithmetic, ever runs.
+# `cargo tree -i crypto-bigint@0.5.5` shows the path. Remove this entry once
+# the provider moves to a fixed crypto-bigint.
+ignore = ["RUSTSEC-2026-0387"]

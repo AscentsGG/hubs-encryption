@@ -1,0 +1,32 @@
+# The Rust implementation of Hubs private messages, shared by the native
+# apps. hubs-mls is the core (MLS, RFC 9420, on mls-rs). The iPhone and Mac
+# apps call it through UniFFI, and the Windows app through the JSON C ABI in
+# hubs-mls-ffi.
+[workspace]
+resolver = "2"
+members = ["hubs-mls", "hubs-mls-ffi", "uniffi-bindgen"]
+# The vendored mls-rs is a dependency, not a member, so its own tests are
+# not part of `cargo test --workspace`.
+exclude = ["vendor"]
+
+[workspace.package]
+edition = "2021"
+rust-version = "1.82"
+license = "AGPL-3.0-only"
+publish = false
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+# Unwind, so a Rust panic comes back to Swift as an error through UniFFI,
+# and is caught at the C ABI boundary on Windows, instead of ending the app.
+panic = "unwind"
+debug = false
+strip = "debuginfo"
+
+# mls-rs 0.56.0 with three changes: lower limits on skipped message keys,
+# PaddingMode::PadUntil256 to pad like ts-mls, and a read-only accessor for
+# an application message's sender data. See vendor/mls-rs/CHANGES.md.
+[patch.crates-io]
+mls-rs = { path = "vendor/mls-rs" }

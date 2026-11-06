@@ -1,0 +1,184 @@
+{
+  "note": "Link v2 (LK-1) and history transfer, from docs/e2ee-work/link-v2/reference.mjs. Fixed inputs; every client must produce these bytes. The outer HPKE layer's vector is outer-vector.json.",
+  "secret": {
+    "bytes": "0123456789",
+    "text": "04HMASW9",
+    "otherText": "0110ABCD",
+    "otherBytes": "0042052d8d"
+  },
+  "fullCode": {
+    "text": "a1b2c3d4e5f604HMASW9",
+    "shown": "a1b2 c3d4 e5f6 04HM ASW9",
+    "parses": [
+      [
+        "a1b2 c3d4 e5f6 04HM ASW9",
+        {
+          "id": "a1b2c3d4e5f6",
+          "secret": "0123456789"
+        }
+      ],
+      [
+        "a1b2c3d4e5f604hmasw9",
+        {
+          "id": "a1b2c3d4e5f6",
+          "secret": "0123456789"
+        }
+      ],
+      [
+        "A1B2C3D4E5F604HMASW9",
+        {
+          "id": "a1b2c3d4e5f6",
+          "secret": "0123456789"
+        }
+      ],
+      [
+        "a1b2c3d4e5f6-04HM-ASW9",
+        {
+          "id": "a1b2c3d4e5f6",
+          "secret": "0123456789"
+        }
+      ],
+      [
+        "a1b2c3d4e5f6\t04HMASW9",
+        {
+          "id": "a1b2c3d4e5f6",
+          "secret": "0123456789"
+        }
+      ],
+      [
+        "a1b2c3d4e5f6oIlOabcd",
+        {
+          "id": "a1b2c3d4e5f6",
+          "secret": "0042052d8d"
+        }
+      ],
+      [
+        "a1b2c3d4e5f6OiLoABCD",
+        {
+          "id": "a1b2c3d4e5f6",
+          "secret": "0042052d8d"
+        }
+      ]
+    ],
+    "refused": [
+      [
+        "a1b2c3d4e5f604HMASW",
+        null
+      ],
+      [
+        "a1b2c3d4e5f604HMASW9X",
+        null
+      ],
+      [
+        "a1b2c3d4e5f604HMASWU",
+        null
+      ],
+      [
+        "a1b2c3d4e5fO04HMASW9",
+        null
+      ],
+      [
+        "a1b2c3d4e5f604HMASWı",
+        null
+      ],
+      [
+        "a1b2c3d4e5f6 04HMASW9",
+        null
+      ],
+      [
+        "a1b2c3d4e5f6–04HMASW9",
+        null
+      ],
+      [
+        "a1b2c3d4e5f6　04HMASW9",
+        null
+      ],
+      [
+        "﻿a1b2c3d4e5f604HMASW9",
+        null
+      ],
+      [
+        "a1b2c3d4e5f6",
+        null
+      ]
+    ]
+  },
+  "linkPublicKey": "1111111111111111111111111111111111111111111111111111111111111111",
+  "userId": "u_alice",
+  "check": {
+    "v2": "155607",
+    "v2WithTypo": "928409"
+  },
+  "key": "7d9c69399047fbe64d6c760a63a9325b053ce571d727f4c789253148752c7eb1",
+  "bundle": {
+    "plaintext": "7b2276223a322c22757365724964223a22755f616c696365227d",
+    "aad": "68756273206c696e6b2076320a62756e646c650a300a310a755f616c6963650a1111111111111111111111111111111111111111111111111111111111111111",
+    "nonce": "000102030405060708090a0b",
+    "inner": "000102030405060708090a0b10fa8f1a8e7510ff948ee609b1df34105490be2b7313ea1b3bacc9558fb5775d3b927d7e42d527a9ae65"
+  },
+  "history": {
+    "partBytes": 262144,
+    "jsonMax": 262140,
+    "sealedPartChars": 349652,
+    "paddedCounts": [
+      [
+        0,
+        null
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        16
+      ],
+      [
+        16,
+        16
+      ],
+      [
+        17,
+        64
+      ],
+      [
+        64,
+        64
+      ],
+      [
+        65,
+        null
+      ]
+    ],
+    "realParts": 2,
+    "count": 4,
+    "part0Head": "0000018f7b2276223a312c22636f6e766572736174696f6e73223a5b7b22636f6e766572736174696f6e4964223a2236",
+    "part0Sha256": "d8aa94b3d314708d506b3c9ead27141cc090bec5aca5f4f61594823d34f30ccd",
+    "part1Sha256": "cd56d14badb82a5b7fad3da6add605e2ec86bdc2324c7c030dff802e516419f6",
+    "emptySha256": "6520a09b8618ce966b8065d84d7ad470aa7da41e556ce91130e99bce143f9694",
+    "digest": "a440d9ef556e63141d627d9e47b63c152f6fa316fcb62bf66c3468b414d6da53",
+    "aad": [
+      "68756273206c696e6b2076320a686973746f72790a300a340a755f616c6963650a1111111111111111111111111111111111111111111111111111111111111111",
+      "68756273206c696e6b2076320a686973746f72790a310a340a755f616c6963650a1111111111111111111111111111111111111111111111111111111111111111",
+      "68756273206c696e6b2076320a686973746f72790a320a340a755f616c6963650a1111111111111111111111111111111111111111111111111111111111111111",
+      "68756273206c696e6b2076320a686973746f72790a330a340a755f616c6963650a1111111111111111111111111111111111111111111111111111111111111111"
+    ],
+    "innerSha256": [
+      "7883d57512a56191385165140140aea7919c0148ffe4fac70ac11626c0a03def",
+      "5d5225726509f84c505cd55ec9dc676e06db8659b99cecd0b180943f6042b720",
+      "fc52dce95ebfbd4e5496e4e5e86537a7d7ce09672869488ee3186096eb419735",
+      "308fe1b2150c332b510410806be459d1f9204e03168d117cdff74f83a64a2a52"
+    ],
+    "badPadding": {
+      "lastByteSetTo1": null
+    }
+  }
+}

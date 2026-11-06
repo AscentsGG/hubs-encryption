@@ -1,0 +1,1287 @@
+{
+  "note": "Calls, protocol 3 (src/calls.ts in the private messages package). P-256 keys are fixed scalars (connectionScalarHex); public keys are 65 uncompressed bytes. Every Ed25519 signature is deterministic. A native client must build every body byte for byte, open every wrap and refuse every one listed under mustNotOpen, refuse every binding under refusedBindings, make every code, verify the roster statement, and reach the same decision for every policy case, in order for policyLists.",
+  "channelId": "dm-channel-1",
+  "groupChannelId": "group-channel-1",
+  "epoch": "6f1c0d2a-3b4e-4c5d-8e9f-0a1b2c3d4e5f",
+  "keyIndex": 1,
+  "callKeyHex": "68d6f18afd513a43269bc8c9815ed7fce9209eebc64798fe0cd5c7b6a22ab884",
+  "bindings": {
+    "alice": {
+      "channelId": "dm-channel-1",
+      "leaseId": "lease-alice-1",
+      "userId": "user-alice",
+      "deviceId": "device-alice-1",
+      "identitySeedHex": "fa8c9a2da3928a0a2f6270f43a10298f419ccc1c2d253b2c1727303723ead88d",
+      "identityPublicKeyHex": "a1136e24f44d873c80684a266ac3b09ae7da5ad44cef2a9d6a5cf52820cf1935",
+      "deviceSeedHex": "f97c0dfbdcda865adae0f3f3e8927f18ad7a0793d4e2a0dfbaf1d6d05db3d49d",
+      "devicePublicKeyHex": "44c99b01a77a3a34f1abec5d66ccd20be8fc22f61d358ea1823c8e74f00b8578",
+      "certificateBodyHex": "68756273207072697661746520646d732064657669636520763100757365722d616c696365006465766963652d616c6963652d310044c99b01a77a3a34f1abec5d66ccd20be8fc22f61d358ea1823c8e74f00b8578",
+      "certificateHex": "2d4c01fb9fa67e6032475a840b4dfd275fc8fe2fa2cb6e1f937fcf3629c2ae18312a05e460e6beea7fd7a6af428834f3e6982c0d4ee4c2584e4e0cf4c6a0e10b",
+      "connectionScalarHex": "d75070564b365bd28ebad5ae587517c7bf64311a31dd22cc46d09f4e4bcc97cd",
+      "connectionPublicKeyHex": "046623635dab7e308658ac0ff7f7cf86a9c8b4116f59087e1293d4cf6f6a14a023cc87cdf1f93fd9af2c8399346e529fe154c9a7c6a3662952da3cebfa0f5d1d75",
+      "bindingBodyHex": "687562732d63616c6c2d62696e64696e672d763300000c646d2d6368616e6e656c2d31000d6c656173652d616c6963652d31000a757365722d616c696365000e6465766963652d616c6963652d31a1136e24f44d873c80684a266ac3b09ae7da5ad44cef2a9d6a5cf52820cf193544c99b01a77a3a34f1abec5d66ccd20be8fc22f61d358ea1823c8e74f00b8578046623635dab7e308658ac0ff7f7cf86a9c8b4116f59087e1293d4cf6f6a14a023cc87cdf1f93fd9af2c8399346e529fe154c9a7c6a3662952da3cebfa0f5d1d75",
+      "signatureHex": "bdb2fae96853a0873b63a709f71a015ba9f60e9a2be64c1cba359b1ffaef84e01a4d94054e9595bc4a3dcda71498ec7b7fea9890db88b4dcf66f4e183e877507",
+      "hashHex": "a8981fe3a57a71b6c330da1587b17565f5c8d36704f53034a143cdfd19423682",
+      "json": {
+        "deviceId": "device-alice-1",
+        "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU=",
+        "devicePublicKey": "RMmbAad6OjTxq+xdZszSC+j8IvYdNY6hgjyOdPALhXg=",
+        "certificate": "LUwB+5+mfmAyR1qEC039J1/I/i+iy24fk3/PNinCrhgxKgXkYOa+6n/Xpq9CiDTz5pgsDU7kwlhOTgz0xqDhCw==",
+        "signature": "vbL66WhToIc7Y6cJ9xoBW6n2Dpor5kwcujWbH/rvhOAaTZQFTpWVvEo9zacUmOx7f+qYkNuItNz2b04YPod1Bw=="
+      }
+    },
+    "bob": {
+      "channelId": "dm-channel-1",
+      "leaseId": "lease-bob-1",
+      "userId": "user-bob",
+      "deviceId": "device-bob-1",
+      "identitySeedHex": "cbf1c31c69766bd7b962004babd51135d59cd49229023d7fe27fefff482241e6",
+      "identityPublicKeyHex": "7aba7da843c605c5b0eda924fbff6eae9100e910203a3cc42758d6f8ed32a85b",
+      "deviceSeedHex": "e9d2fa149986d56d82ac172a4f2c742912080025399a97efe2d489f24594fae9",
+      "devicePublicKeyHex": "20a26788319c6f96a5b133dd853f7c8117f678e6d834290bf6178a5222b6c66d",
+      "certificateBodyHex": "68756273207072697661746520646d732064657669636520763100757365722d626f62006465766963652d626f622d310020a26788319c6f96a5b133dd853f7c8117f678e6d834290bf6178a5222b6c66d",
+      "certificateHex": "cb4d72c89a8d601196fe7da0c2d4577414c1b7e137ccab4a9e4f42f3ce7a26c90e70750e476f29a89bcb5f353037c2fa6867f98b8db31b0017f8430463363a07",
+      "connectionScalarHex": "0056af89da404966465825cd6b4064f01a8ec7e40d5d313319abfb6cfe8f3cf3",
+      "connectionPublicKeyHex": "04ab75048ff8842ab1bb3d92568759e0747d06d1379bb4a1fd2e53ec94ce100f4094b4c9529d6c102ba9f62eeeea6f1a8425aa08c8dc6d7378b995f59c192b59d0",
+      "bindingBodyHex": "687562732d63616c6c2d62696e64696e672d763300000c646d2d6368616e6e656c2d31000b6c656173652d626f622d310008757365722d626f62000c6465766963652d626f622d317aba7da843c605c5b0eda924fbff6eae9100e910203a3cc42758d6f8ed32a85b20a26788319c6f96a5b133dd853f7c8117f678e6d834290bf6178a5222b6c66d04ab75048ff8842ab1bb3d92568759e0747d06d1379bb4a1fd2e53ec94ce100f4094b4c9529d6c102ba9f62eeeea6f1a8425aa08c8dc6d7378b995f59c192b59d0",
+      "signatureHex": "7c2b78961ea6d5ae10cbfd201a949c672073ea55b59fea8c19313afe3315aba0f0573859328a2ec0cf099582889d4256ebcb4428cb1acc88d12f3a39c114e606",
+      "hashHex": "7d558918a9a08670099645a13de8cfd3343d4d34d39b439fa78de6ed0f6a9080",
+      "json": {
+        "deviceId": "device-bob-1",
+        "identityPublicKey": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "devicePublicKey": "IKJniDGcb5alsTPdhT98gRf2eObYNCkL9heKUiK2xm0=",
+        "certificate": "y01yyJqNYBGW/n2gwtRXdBTBt+E3zKtKnk9C8856JskOcHUOR28pqJvLXzUwN8L6aGf5i42zGwAX+EMEYzY6Bw==",
+        "signature": "fCt4lh6m1a4Qy/0gGpScZyBz6lW1n+qMGTE6/jMVq6DwVzhZMoouwM8JlYKInUJW68tEKMsazIjRLzo5wRTmBg=="
+      }
+    }
+  },
+  "refusedBindings": [
+    {
+      "name": "the binding names another channel",
+      "channelId": "dm-channel-2",
+      "leaseId": "lease-alice-1",
+      "userId": "user-alice",
+      "connectionPublicKeyHex": "046623635dab7e308658ac0ff7f7cf86a9c8b4116f59087e1293d4cf6f6a14a023cc87cdf1f93fd9af2c8399346e529fe154c9a7c6a3662952da3cebfa0f5d1d75",
+      "json": {
+        "deviceId": "device-alice-1",
+        "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU=",
+        "devicePublicKey": "RMmbAad6OjTxq+xdZszSC+j8IvYdNY6hgjyOdPALhXg=",
+        "certificate": "LUwB+5+mfmAyR1qEC039J1/I/i+iy24fk3/PNinCrhgxKgXkYOa+6n/Xpq9CiDTz5pgsDU7kwlhOTgz0xqDhCw==",
+        "signature": "vbL66WhToIc7Y6cJ9xoBW6n2Dpor5kwcujWbH/rvhOAaTZQFTpWVvEo9zacUmOx7f+qYkNuItNz2b04YPod1Bw=="
+      },
+      "statementHex": "687562732d63616c6c2d62696e64696e672d763300000c646d2d6368616e6e656c2d32000d6c656173652d616c6963652d31000a757365722d616c696365000e6465766963652d616c6963652d31a1136e24f44d873c80684a266ac3b09ae7da5ad44cef2a9d6a5cf52820cf193544c99b01a77a3a34f1abec5d66ccd20be8fc22f61d358ea1823c8e74f00b8578046623635dab7e308658ac0ff7f7cf86a9c8b4116f59087e1293d4cf6f6a14a023cc87cdf1f93fd9af2c8399346e529fe154c9a7c6a3662952da3cebfa0f5d1d75",
+      "valid": false
+    },
+    {
+      "name": "the server relabels the account",
+      "channelId": "dm-channel-1",
+      "leaseId": "lease-alice-1",
+      "userId": "user-mallory",
+      "connectionPublicKeyHex": "046623635dab7e308658ac0ff7f7cf86a9c8b4116f59087e1293d4cf6f6a14a023cc87cdf1f93fd9af2c8399346e529fe154c9a7c6a3662952da3cebfa0f5d1d75",
+      "json": {
+        "deviceId": "device-alice-1",
+        "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU=",
+        "devicePublicKey": "RMmbAad6OjTxq+xdZszSC+j8IvYdNY6hgjyOdPALhXg=",
+        "certificate": "LUwB+5+mfmAyR1qEC039J1/I/i+iy24fk3/PNinCrhgxKgXkYOa+6n/Xpq9CiDTz5pgsDU7kwlhOTgz0xqDhCw==",
+        "signature": "vbL66WhToIc7Y6cJ9xoBW6n2Dpor5kwcujWbH/rvhOAaTZQFTpWVvEo9zacUmOx7f+qYkNuItNz2b04YPod1Bw=="
+      },
+      "statementHex": "687562732d63616c6c2d62696e64696e672d763300000c646d2d6368616e6e656c2d31000d6c656173652d616c6963652d31000c757365722d6d616c6c6f7279000e6465766963652d616c6963652d31a1136e24f44d873c80684a266ac3b09ae7da5ad44cef2a9d6a5cf52820cf193544c99b01a77a3a34f1abec5d66ccd20be8fc22f61d358ea1823c8e74f00b8578046623635dab7e308658ac0ff7f7cf86a9c8b4116f59087e1293d4cf6f6a14a023cc87cdf1f93fd9af2c8399346e529fe154c9a7c6a3662952da3cebfa0f5d1d75",
+      "valid": false
+    },
+    {
+      "name": "the server relabels the connection id",
+      "channelId": "dm-channel-1",
+      "leaseId": "lease-alice-2",
+      "userId": "user-alice",
+      "connectionPublicKeyHex": "046623635dab7e308658ac0ff7f7cf86a9c8b4116f59087e1293d4cf6f6a14a023cc87cdf1f93fd9af2c8399346e529fe154c9a7c6a3662952da3cebfa0f5d1d75",
+      "json": {
+        "deviceId": "device-alice-1",
+        "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU=",
+        "devicePublicKey": "RMmbAad6OjTxq+xdZszSC+j8IvYdNY6hgjyOdPALhXg=",
+        "certificate": "LUwB+5+mfmAyR1qEC039J1/I/i+iy24fk3/PNinCrhgxKgXkYOa+6n/Xpq9CiDTz5pgsDU7kwlhOTgz0xqDhCw==",
+        "signature": "vbL66WhToIc7Y6cJ9xoBW6n2Dpor5kwcujWbH/rvhOAaTZQFTpWVvEo9zacUmOx7f+qYkNuItNz2b04YPod1Bw=="
+      },
+      "statementHex": "687562732d63616c6c2d62696e64696e672d763300000c646d2d6368616e6e656c2d31000d6c656173652d616c6963652d32000a757365722d616c696365000e6465766963652d616c6963652d31a1136e24f44d873c80684a266ac3b09ae7da5ad44cef2a9d6a5cf52820cf193544c99b01a77a3a34f1abec5d66ccd20be8fc22f61d358ea1823c8e74f00b8578046623635dab7e308658ac0ff7f7cf86a9c8b4116f59087e1293d4cf6f6a14a023cc87cdf1f93fd9af2c8399346e529fe154c9a7c6a3662952da3cebfa0f5d1d75",
+      "valid": false
+    },
+    {
+      "name": "the server swaps the connection key",
+      "channelId": "dm-channel-1",
+      "leaseId": "lease-alice-1",
+      "userId": "user-alice",
+      "connectionPublicKeyHex": "047281e29ab32b8d76d57e5aca21a0882666a2eb719d2029c304857d7d894799f80716692dfa0fc75c5124c79e62c8efc4bb6c677b1328911c4c2fb1efaa7e2cc8",
+      "json": {
+        "deviceId": "device-alice-1",
+        "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU=",
+        "devicePublicKey": "RMmbAad6OjTxq+xdZszSC+j8IvYdNY6hgjyOdPALhXg=",
+        "certificate": "LUwB+5+mfmAyR1qEC039J1/I/i+iy24fk3/PNinCrhgxKgXkYOa+6n/Xpq9CiDTz5pgsDU7kwlhOTgz0xqDhCw==",
+        "signature": "vbL66WhToIc7Y6cJ9xoBW6n2Dpor5kwcujWbH/rvhOAaTZQFTpWVvEo9zacUmOx7f+qYkNuItNz2b04YPod1Bw=="
+      },
+      "statementHex": "687562732d63616c6c2d62696e64696e672d763300000c646d2d6368616e6e656c2d31000d6c656173652d616c6963652d31000a757365722d616c696365000e6465766963652d616c6963652d31a1136e24f44d873c80684a266ac3b09ae7da5ad44cef2a9d6a5cf52820cf193544c99b01a77a3a34f1abec5d66ccd20be8fc22f61d358ea1823c8e74f00b8578047281e29ab32b8d76d57e5aca21a0882666a2eb719d2029c304857d7d894799f80716692dfa0fc75c5124c79e62c8efc4bb6c677b1328911c4c2fb1efaa7e2cc8",
+      "valid": false
+    },
+    {
+      "name": "a certificate from another identity",
+      "channelId": "dm-channel-1",
+      "leaseId": "lease-alice-1",
+      "userId": "user-alice",
+      "connectionPublicKeyHex": "046623635dab7e308658ac0ff7f7cf86a9c8b4116f59087e1293d4cf6f6a14a023cc87cdf1f93fd9af2c8399346e529fe154c9a7c6a3662952da3cebfa0f5d1d75",
+      "json": {
+        "deviceId": "device-alice-1",
+        "identityPublicKey": "OiA24zcv7IQ7kkbvydB9KYmbE3xK9GihzMRB3Wz96v8=",
+        "devicePublicKey": "RMmbAad6OjTxq+xdZszSC+j8IvYdNY6hgjyOdPALhXg=",
+        "certificate": "TVQYgJSpKkycSlffT0V+oiaBy8h1O7Lw426mvj6SjElyfWty45ejH4jbF+Ewzav3lroe1eyqDuo+HiMfYY6CAQ==",
+        "signature": "vbL66WhToIc7Y6cJ9xoBW6n2Dpor5kwcujWbH/rvhOAaTZQFTpWVvEo9zacUmOx7f+qYkNuItNz2b04YPod1Bw=="
+      },
+      "statementHex": "687562732d63616c6c2d62696e64696e672d763300000c646d2d6368616e6e656c2d31000d6c656173652d616c6963652d31000a757365722d616c696365000e6465766963652d616c6963652d313a2036e3372fec843b9246efc9d07d29899b137c4af468a1ccc441dd6cfdeaff44c99b01a77a3a34f1abec5d66ccd20be8fc22f61d358ea1823c8e74f00b8578046623635dab7e308658ac0ff7f7cf86a9c8b4116f59087e1293d4cf6f6a14a023cc87cdf1f93fd9af2c8399346e529fe154c9a7c6a3662952da3cebfa0f5d1d75",
+      "valid": false
+    },
+    {
+      "name": "the identity key is one byte short",
+      "channelId": "dm-channel-1",
+      "leaseId": "lease-alice-1",
+      "userId": "user-alice",
+      "connectionPublicKeyHex": "046623635dab7e308658ac0ff7f7cf86a9c8b4116f59087e1293d4cf6f6a14a023cc87cdf1f93fd9af2c8399346e529fe154c9a7c6a3662952da3cebfa0f5d1d75",
+      "json": {
+        "deviceId": "device-alice-1",
+        "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGQ==",
+        "devicePublicKey": "RMmbAad6OjTxq+xdZszSC+j8IvYdNY6hgjyOdPALhXg=",
+        "certificate": "LUwB+5+mfmAyR1qEC039J1/I/i+iy24fk3/PNinCrhgxKgXkYOa+6n/Xpq9CiDTz5pgsDU7kwlhOTgz0xqDhCw==",
+        "signature": "vbL66WhToIc7Y6cJ9xoBW6n2Dpor5kwcujWbH/rvhOAaTZQFTpWVvEo9zacUmOx7f+qYkNuItNz2b04YPod1Bw=="
+      },
+      "statementHex": "687562732d63616c6c2d756e626f756e642d763300000c646d2d6368616e6e656c2d31000d6c656173652d616c6963652d31000a757365722d616c696365046623635dab7e308658ac0ff7f7cf86a9c8b4116f59087e1293d4cf6f6a14a023cc87cdf1f93fd9af2c8399346e529fe154c9a7c6a3662952da3cebfa0f5d1d75",
+      "valid": false
+    }
+  ],
+  "unbound": {
+    "carol": {
+      "channelId": "dm-channel-1",
+      "leaseId": "lease-carol-1",
+      "userId": "user-carol",
+      "connectionScalarHex": "a0fb588b132e37dff6431bc4f84f1f34dbe399eef31b37d06f57182e260f5c8b",
+      "connectionPublicKeyHex": "047281e29ab32b8d76d57e5aca21a0882666a2eb719d2029c304857d7d894799f80716692dfa0fc75c5124c79e62c8efc4bb6c677b1328911c4c2fb1efaa7e2cc8",
+      "statementHex": "687562732d63616c6c2d756e626f756e642d763300000c646d2d6368616e6e656c2d31000d6c656173652d6361726f6c2d31000a757365722d6361726f6c047281e29ab32b8d76d57e5aca21a0882666a2eb719d2029c304857d7d894799f80716692dfa0fc75c5124c79e62c8efc4bb6c677b1328911c4c2fb1efaa7e2cc8",
+      "hashHex": "bf5d056690bc7e95c613075f1d1f0ce22fe01e30b74372c12f03f48c1aa337c6"
+    }
+  },
+  "imposter": {
+    "userId": "user-bob",
+    "deviceId": "device-bob-2",
+    "identitySeedHex": "612baf17b51d92db5956302857cc84dfc75e3e4b3e0b4447060d4d0a30d418e4",
+    "identityPublicKeyHex": "3a2036e3372fec843b9246efc9d07d29899b137c4af468a1ccc441dd6cfdeaff"
+  },
+  "wrap": {
+    "aliceToBob": {
+      "senderScalarHex": "d75070564b365bd28ebad5ae587517c7bf64311a31dd22cc46d09f4e4bcc97cd",
+      "recipientScalarHex": "0056af89da404966465825cd6b4064f01a8ec7e40d5d313319abfb6cfe8f3cf3",
+      "senderHashHex": "a8981fe3a57a71b6c330da1587b17565f5c8d36704f53034a143cdfd19423682",
+      "recipientHashHex": "7d558918a9a08670099645a13de8cfd3343d4d34d39b439fa78de6ed0f6a9080",
+      "sharedSecretHex": "a00551ae14f66f914a6792bbf39d92216913b00bdcd3e7f6d903be939227fd23",
+      "infoHex": "687562732d63616c6c2d777261702d763300000c646d2d6368616e6e656c2d31002436663163306432612d336234652d346335642d386539662d30613162326333643465356601a8981fe3a57a71b6c330da1587b17565f5c8d36704f53034a143cdfd194236827d558918a9a08670099645a13de8cfd3343d4d34d39b439fa78de6ed0f6a9080",
+      "wrapKeyHex": "da84fe080516c2b498e1867e6f9f4b36888571ba6c19224733295edd9de0e79e",
+      "ivHex": "01c36f1d1a3cc5627515094b",
+      "callKeyHex": "68d6f18afd513a43269bc8c9815ed7fce9209eebc64798fe0cd5c7b6a22ab884",
+      "sealedHex": "1091aa7d6728e745c42eb65f3f66f84ca0791c77f72e872f3bc6270e888bf05065cd8a7f97fe1de13c4f267203b369b8"
+    },
+    "bobToAlice": {
+      "senderScalarHex": "0056af89da404966465825cd6b4064f01a8ec7e40d5d313319abfb6cfe8f3cf3",
+      "recipientScalarHex": "d75070564b365bd28ebad5ae587517c7bf64311a31dd22cc46d09f4e4bcc97cd",
+      "senderHashHex": "7d558918a9a08670099645a13de8cfd3343d4d34d39b439fa78de6ed0f6a9080",
+      "recipientHashHex": "a8981fe3a57a71b6c330da1587b17565f5c8d36704f53034a143cdfd19423682",
+      "sharedSecretHex": "a00551ae14f66f914a6792bbf39d92216913b00bdcd3e7f6d903be939227fd23",
+      "infoHex": "687562732d63616c6c2d777261702d763300000c646d2d6368616e6e656c2d31002436663163306432612d336234652d346335642d386539662d306131623263336434653566017d558918a9a08670099645a13de8cfd3343d4d34d39b439fa78de6ed0f6a9080a8981fe3a57a71b6c330da1587b17565f5c8d36704f53034a143cdfd19423682",
+      "wrapKeyHex": "7efe6936a6edd2c94f9ba137b339dc9a878d98cd9a2216749ea063903848590e",
+      "ivHex": "01c36f1d1a3cc5627515094b",
+      "callKeyHex": "68d6f18afd513a43269bc8c9815ed7fce9209eebc64798fe0cd5c7b6a22ab884",
+      "sealedHex": "0d6af33b1405e89d3d1efc5fa658b16065fa821eb7a35e2d71e4933ab656d7f314ca86769d0be64862e981a503eacb1c"
+    },
+    "aliceToCarol": {
+      "senderScalarHex": "d75070564b365bd28ebad5ae587517c7bf64311a31dd22cc46d09f4e4bcc97cd",
+      "recipientScalarHex": "a0fb588b132e37dff6431bc4f84f1f34dbe399eef31b37d06f57182e260f5c8b",
+      "senderHashHex": "a8981fe3a57a71b6c330da1587b17565f5c8d36704f53034a143cdfd19423682",
+      "recipientHashHex": "bf5d056690bc7e95c613075f1d1f0ce22fe01e30b74372c12f03f48c1aa337c6",
+      "sharedSecretHex": "f4d4add8f4edc00936d6edc1ffa0225327f632598be7c83e129afbc15c1e5a8f",
+      "infoHex": "687562732d63616c6c2d777261702d763300000c646d2d6368616e6e656c2d31002436663163306432612d336234652d346335642d386539662d30613162326333643465356601a8981fe3a57a71b6c330da1587b17565f5c8d36704f53034a143cdfd19423682bf5d056690bc7e95c613075f1d1f0ce22fe01e30b74372c12f03f48c1aa337c6",
+      "wrapKeyHex": "1601ebe9787c31612c9e1a5a482a99b0a2d46f9ec08b725ebb790b9418933c25",
+      "ivHex": "01c36f1d1a3cc5627515094b",
+      "callKeyHex": "68d6f18afd513a43269bc8c9815ed7fce9209eebc64798fe0cd5c7b6a22ab884",
+      "sealedHex": "00e0760eb08a740bb36db08b649d129c07e8030da2c0ab94d6f46e6ecf8cdcaee756007fadd2ff6db75e2716fbb2e05f"
+    },
+    "mustNotOpen": [
+      {
+        "name": "another epoch",
+        "infoHex": "687562732d63616c6c2d777261702d763300000c646d2d6368616e6e656c2d31002436663163306432612d336234652d346335642d386539662d30613162326333643465363001a8981fe3a57a71b6c330da1587b17565f5c8d36704f53034a143cdfd194236827d558918a9a08670099645a13de8cfd3343d4d34d39b439fa78de6ed0f6a9080",
+        "opens": false
+      },
+      {
+        "name": "another key slot",
+        "infoHex": "687562732d63616c6c2d777261702d763300000c646d2d6368616e6e656c2d31002436663163306432612d336234652d346335642d386539662d30613162326333643465356602a8981fe3a57a71b6c330da1587b17565f5c8d36704f53034a143cdfd194236827d558918a9a08670099645a13de8cfd3343d4d34d39b439fa78de6ed0f6a9080",
+        "opens": false
+      },
+      {
+        "name": "another channel",
+        "infoHex": "687562732d63616c6c2d777261702d763300000c646d2d6368616e6e656c2d32002436663163306432612d336234652d346335642d386539662d30613162326333643465356601a8981fe3a57a71b6c330da1587b17565f5c8d36704f53034a143cdfd194236827d558918a9a08670099645a13de8cfd3343d4d34d39b439fa78de6ed0f6a9080",
+        "opens": false
+      },
+      {
+        "name": "the two connection hashes swapped",
+        "infoHex": "687562732d63616c6c2d777261702d763300000c646d2d6368616e6e656c2d31002436663163306432612d336234652d346335642d386539662d306131623263336434653566017d558918a9a08670099645a13de8cfd3343d4d34d39b439fa78de6ed0f6a9080a8981fe3a57a71b6c330da1587b17565f5c8d36704f53034a143cdfd19423682",
+        "opens": false
+      },
+      {
+        "name": "another sender's statement",
+        "infoHex": "687562732d63616c6c2d777261702d763300000c646d2d6368616e6e656c2d31002436663163306432612d336234652d346335642d386539662d30613162326333643465356601bf5d056690bc7e95c613075f1d1f0ce22fe01e30b74372c12f03f48c1aa337c67d558918a9a08670099645a13de8cfd3343d4d34d39b439fa78de6ed0f6a9080",
+        "opens": false
+      }
+    ]
+  },
+  "wrapV2": {
+    "note": "Protocol 2, for a pair with an older app: AES-256-GCM under the raw ECDH secret, AAD the context.",
+    "contextUtf8": "hubs-call-key\ndm-channel-1\n6f1c0d2a-3b4e-4c5d-8e9f-0a1b2c3d4e5f",
+    "sharedSecretHex": "a00551ae14f66f914a6792bbf39d92216913b00bdcd3e7f6d903be939227fd23",
+    "ivHex": "01c36f1d1a3cc5627515094b",
+    "sealedHex": "fb8bf734dba096f74b01e538cd74eeaba66223645546bdc765b55f0b980fef7376e2f26789e5596a903019b57a489a79"
+  },
+  "code": {
+    "codeKeyHex": "ba777a834b736bbe1922887cd7c75a95b94ed272c740290b233e35262b79ae95",
+    "twoPeople": {
+      "channelId": "dm-channel-1",
+      "hashesHex": [
+        "7d558918a9a08670099645a13de8cfd3343d4d34d39b439fa78de6ed0f6a9080",
+        "a8981fe3a57a71b6c330da1587b17565f5c8d36704f53034a143cdfd19423682"
+      ],
+      "transcriptHex": "687562732d63616c6c2d636f64652d763300000c646d2d6368616e6e656c2d31002436663163306432612d336234652d346335642d386539662d3061316232633364346535660100027d558918a9a08670099645a13de8cfd3343d4d34d39b439fa78de6ed0f6a9080a8981fe3a57a71b6c330da1587b17565f5c8d36704f53034a143cdfd19423682",
+      "transcriptDigestHex": "113ca98752fb5bfb0b14cfe0c097539e250d86bd528f607eaaec15580bf05b16",
+      "macHex": "efd15d57e67a72b6433988e7d6f45146a5be5c8355b800e8020716f7827c09f8",
+      "code": "39238 57497 76401 26883"
+    },
+    "threePeople": {
+      "channelId": "group-channel-1",
+      "hashesHex": [
+        "19b11dab5b97ff9e5f2acfb569bc8097b81db6a79c4cc393fd2c5de29cf929d7",
+        "f23f98b14a88b81448184b2fca1e7456f8bf032355591ba65e2922547b4bf2b8",
+        "b1605e7413a876bdf0c543da9a5c0fbcba7f73a63f82a994b48e941fed5f6a3f"
+      ],
+      "transcriptHex": "687562732d63616c6c2d636f64652d763300000f67726f75702d6368616e6e656c2d31002436663163306432612d336234652d346335642d386539662d30613162326333643465356601000319b11dab5b97ff9e5f2acfb569bc8097b81db6a79c4cc393fd2c5de29cf929d7b1605e7413a876bdf0c543da9a5c0fbcba7f73a63f82a994b48e941fed5f6a3ff23f98b14a88b81448184b2fca1e7456f8bf032355591ba65e2922547b4bf2b8",
+      "transcriptDigestHex": "6407142f53420bda87ccf466acf9d68b45a4107eda76b5fe0f9b65289aee33d4",
+      "macHex": "0b6582cba10039447c0e702b62a1aa99caa725a3d6bf360bb49138744504ffe6",
+      "code": "10881 89518 21354 48067"
+    },
+    "v2": {
+      "note": "The 12-digit code for the two connections, shown while an older app is in the call.",
+      "code": "9611 9619 8636"
+    }
+  },
+  "view": {
+    "channelId": "group-channel-1",
+    "leaseId": "lease-alice-1",
+    "epoch": "6f1c0d2a-3b4e-4c5d-8e9f-0a1b2c3d4e5f",
+    "keyIndex": 1,
+    "transcriptDigestHex": "6407142f53420bda87ccf466acf9d68b45a4107eda76b5fe0f9b65289aee33d4",
+    "bodyHex": "687562732d63616c6c2d766965772d763300000f67726f75702d6368616e6e656c2d31000d6c656173652d616c6963652d31002436663163306432612d336234652d346335642d386539662d306131623263336434653566016407142f53420bda87ccf466acf9d68b45a4107eda76b5fe0f9b65289aee33d4",
+    "signatureHex": "2d7d01899b265f8ca09002a2e590b7497f09359f6dbb53dceed5dc1389f6b7211e2a2bbbc8d071a62f54ff9d2217c6242b1514aa506aa28678e07a42296d930f",
+    "devicePublicKeyHex": "44c99b01a77a3a34f1abec5d66ccd20be8fc22f61d358ea1823c8e74f00b8578"
+  },
+  "policy": [
+    {
+      "name": "a binding that does not verify",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "invalid",
+          "identityPublicKey": null
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "refused",
+        "share": false,
+        "pin": "none",
+        "refusal": "binding"
+      }
+    },
+    {
+      "name": "an older app that sends a binding",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 2,
+          "binding": "valid",
+          "identityPublicKey": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs="
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "refused",
+        "share": false,
+        "pin": "none",
+        "refusal": "binding"
+      }
+    },
+    {
+      "name": "a third account in a one-to-one call",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": "user-carol",
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "valid",
+          "identityPublicKey": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs="
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "refused",
+        "share": false,
+        "pin": "none",
+        "refusal": "not-in-conversation"
+      }
+    },
+    {
+      "name": "the other person in a one-to-one call",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": "user-bob",
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "valid",
+          "identityPublicKey": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs="
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "not-verified",
+        "share": true,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "your own other device in a one-to-one call",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": "user-bob",
+        "closed": false,
+        "connection": {
+          "userId": "user-alice",
+          "v": 3,
+          "binding": "valid",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "pin": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "you-linked",
+        "share": true,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "an older app after the old path closed",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": true,
+        "connection": {
+          "userId": "user-bob",
+          "v": 2,
+          "binding": "none",
+          "identityPublicKey": null
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "refused",
+        "share": false,
+        "pin": "none",
+        "refusal": "update-required"
+      }
+    },
+    {
+      "name": "your own older app after the old path closed",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": true,
+        "connection": {
+          "userId": "user-alice",
+          "v": 2,
+          "binding": "none",
+          "identityPublicKey": null
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "refused",
+        "share": false,
+        "pin": "none",
+        "refusal": "update-required"
+      }
+    },
+    {
+      "name": "unbound after the old path closed",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": true,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "none",
+          "identityPublicKey": null
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "not-verified",
+        "share": true,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "you, bound under your identity key",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-alice",
+          "v": 3,
+          "binding": "valid",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "you-linked",
+        "share": true,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "you, bound under another identity key",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-alice",
+          "v": 3,
+          "binding": "valid",
+          "identityPublicKey": "OiA24zcv7IQ7kkbvydB9KYmbE3xK9GihzMRB3Wz96v8="
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "refused",
+        "share": false,
+        "pin": "none",
+        "refusal": "own-identity"
+      }
+    },
+    {
+      "name": "you, bound, on a device with no identity",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": null
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-alice",
+          "v": 3,
+          "binding": "valid",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "pin": null,
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "you-unchecked",
+        "share": true,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "you, unbound",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-alice",
+          "v": 3,
+          "binding": "none",
+          "identityPublicKey": null
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "refused",
+        "share": false,
+        "pin": "none",
+        "refusal": "own-unlinked"
+      }
+    },
+    {
+      "name": "you, on an older app",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-alice",
+          "v": 2,
+          "binding": "none",
+          "identityPublicKey": null
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "refused",
+        "share": false,
+        "pin": "none",
+        "refusal": "own-unlinked"
+      }
+    },
+    {
+      "name": "you, unbound, on a device with no identity",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": null
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-alice",
+          "v": 3,
+          "binding": "none",
+          "identityPublicKey": null
+        },
+        "pin": null,
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "you-unlinked",
+        "share": true,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "you, on an older app, on a device with no identity",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": null
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-alice",
+          "v": 2,
+          "binding": "none",
+          "identityPublicKey": null
+        },
+        "pin": null,
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "you-unlinked",
+        "share": true,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "you, unbound, in a one-to-one call",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": "user-bob",
+        "closed": false,
+        "connection": {
+          "userId": "user-alice",
+          "v": 3,
+          "binding": "none",
+          "identityPublicKey": null
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "refused",
+        "share": false,
+        "pin": "none",
+        "refusal": "own-unlinked"
+      }
+    },
+    {
+      "name": "another account, bound, on a device with no identity",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": null
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "valid",
+          "identityPublicKey": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs="
+        },
+        "pin": null,
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "not-verified",
+        "share": true,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "another account, bound, first sight",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "valid",
+          "identityPublicKey": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs="
+        },
+        "pin": null,
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "not-verified",
+        "share": true,
+        "pin": "first"
+      }
+    },
+    {
+      "name": "another account, pinned and verified",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "valid",
+          "identityPublicKey": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs="
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "keyChange": null
+      },
+      "expected": {
+        "state": "verified",
+        "share": true,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "another account, pinned, not verified",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "valid",
+          "identityPublicKey": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs="
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "not-verified",
+        "share": true,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "another account under a new identity key, not verified before",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "valid",
+          "identityPublicKey": "OiA24zcv7IQ7kkbvydB9KYmbE3xK9GihzMRB3Wz96v8="
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "changed",
+        "share": true,
+        "pin": "changed"
+      }
+    },
+    {
+      "name": "another account under a new identity key, verified before",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "valid",
+          "identityPublicKey": "OiA24zcv7IQ7kkbvydB9KYmbE3xK9GihzMRB3Wz96v8="
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "keyChange": null
+      },
+      "expected": {
+        "state": "held",
+        "share": false,
+        "pin": "changed"
+      }
+    },
+    {
+      "name": "a change not reviewed yet, not verified before",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "valid",
+          "identityPublicKey": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs="
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": {
+          "wasVerified": false
+        }
+      },
+      "expected": {
+        "state": "changed",
+        "share": true,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "a change not reviewed yet, verified before",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "valid",
+          "identityPublicKey": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs="
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": {
+          "wasVerified": true
+        }
+      },
+      "expected": {
+        "state": "held",
+        "share": false,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "another account, unbound, not verified",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "none",
+          "identityPublicKey": null
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "not-verified",
+        "share": true,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "another account, unbound, verified",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "none",
+          "identityPublicKey": null
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "keyChange": null
+      },
+      "expected": {
+        "state": "held",
+        "share": false,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "another account, unbound, a change verified before",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 3,
+          "binding": "none",
+          "identityPublicKey": null
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": {
+          "wasVerified": true
+        }
+      },
+      "expected": {
+        "state": "held",
+        "share": false,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "another account on an older app, not verified",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 2,
+          "binding": "none",
+          "identityPublicKey": null
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": null,
+        "keyChange": null
+      },
+      "expected": {
+        "state": "not-verified",
+        "share": true,
+        "pin": "none"
+      }
+    },
+    {
+      "name": "another account on an older app, verified",
+      "input": {
+        "self": {
+          "userId": "user-alice",
+          "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+        },
+        "oneToOnePeer": null,
+        "closed": false,
+        "connection": {
+          "userId": "user-bob",
+          "v": 2,
+          "binding": "none",
+          "identityPublicKey": null
+        },
+        "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "verified": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+        "keyChange": null
+      },
+      "expected": {
+        "state": "held",
+        "share": false,
+        "pin": "none"
+      }
+    }
+  ],
+  "policyLists": [
+    {
+      "name": "one account under two identity keys, one of them pinned",
+      "inputs": [
+        {
+          "self": {
+            "userId": "user-alice",
+            "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+          },
+          "oneToOnePeer": null,
+          "closed": false,
+          "connection": {
+            "userId": "user-bob",
+            "v": 3,
+            "binding": "valid",
+            "identityPublicKey": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs="
+          },
+          "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+          "verified": null,
+          "keyChange": null
+        },
+        {
+          "self": {
+            "userId": "user-alice",
+            "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+          },
+          "oneToOnePeer": null,
+          "closed": false,
+          "connection": {
+            "userId": "user-bob",
+            "v": 3,
+            "binding": "valid",
+            "identityPublicKey": "OiA24zcv7IQ7kkbvydB9KYmbE3xK9GihzMRB3Wz96v8="
+          },
+          "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+          "verified": null,
+          "keyChange": null
+        }
+      ],
+      "expected": [
+        {
+          "state": "not-verified",
+          "share": true,
+          "pin": "none"
+        },
+        {
+          "state": "refused",
+          "share": false,
+          "pin": "none",
+          "refusal": "two-identities"
+        }
+      ]
+    },
+    {
+      "name": "one account under two identity keys, neither pinned",
+      "inputs": [
+        {
+          "self": {
+            "userId": "user-alice",
+            "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+          },
+          "oneToOnePeer": null,
+          "closed": false,
+          "connection": {
+            "userId": "user-bob",
+            "v": 3,
+            "binding": "valid",
+            "identityPublicKey": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs="
+          },
+          "pin": null,
+          "verified": null,
+          "keyChange": null
+        },
+        {
+          "self": {
+            "userId": "user-alice",
+            "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+          },
+          "oneToOnePeer": null,
+          "closed": false,
+          "connection": {
+            "userId": "user-bob",
+            "v": 3,
+            "binding": "valid",
+            "identityPublicKey": "OiA24zcv7IQ7kkbvydB9KYmbE3xK9GihzMRB3Wz96v8="
+          },
+          "pin": null,
+          "verified": null,
+          "keyChange": null
+        }
+      ],
+      "expected": [
+        {
+          "state": "refused",
+          "share": false,
+          "pin": "none",
+          "refusal": "two-identities"
+        },
+        {
+          "state": "refused",
+          "share": false,
+          "pin": "none",
+          "refusal": "two-identities"
+        }
+      ]
+    },
+    {
+      "name": "two connections of one account under the same new key",
+      "inputs": [
+        {
+          "self": {
+            "userId": "user-alice",
+            "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+          },
+          "oneToOnePeer": null,
+          "closed": false,
+          "connection": {
+            "userId": "user-bob",
+            "v": 3,
+            "binding": "valid",
+            "identityPublicKey": "OiA24zcv7IQ7kkbvydB9KYmbE3xK9GihzMRB3Wz96v8="
+          },
+          "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+          "verified": null,
+          "keyChange": null
+        },
+        {
+          "self": {
+            "userId": "user-alice",
+            "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+          },
+          "oneToOnePeer": null,
+          "closed": false,
+          "connection": {
+            "userId": "user-bob",
+            "v": 3,
+            "binding": "valid",
+            "identityPublicKey": "OiA24zcv7IQ7kkbvydB9KYmbE3xK9GihzMRB3Wz96v8="
+          },
+          "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+          "verified": null,
+          "keyChange": null
+        }
+      ],
+      "expected": [
+        {
+          "state": "changed",
+          "share": true,
+          "pin": "changed"
+        },
+        {
+          "state": "changed",
+          "share": true,
+          "pin": "none"
+        }
+      ]
+    },
+    {
+      "name": "two connections of one account, first sight",
+      "inputs": [
+        {
+          "self": {
+            "userId": "user-alice",
+            "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+          },
+          "oneToOnePeer": null,
+          "closed": false,
+          "connection": {
+            "userId": "user-bob",
+            "v": 3,
+            "binding": "valid",
+            "identityPublicKey": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs="
+          },
+          "pin": null,
+          "verified": null,
+          "keyChange": null
+        },
+        {
+          "self": {
+            "userId": "user-alice",
+            "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+          },
+          "oneToOnePeer": null,
+          "closed": false,
+          "connection": {
+            "userId": "user-bob",
+            "v": 3,
+            "binding": "valid",
+            "identityPublicKey": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs="
+          },
+          "pin": null,
+          "verified": null,
+          "keyChange": null
+        }
+      ],
+      "expected": [
+        {
+          "state": "not-verified",
+          "share": true,
+          "pin": "first"
+        },
+        {
+          "state": "not-verified",
+          "share": true,
+          "pin": "none"
+        }
+      ]
+    },
+    {
+      "name": "a verified contact's two connections under the same new key",
+      "inputs": [
+        {
+          "self": {
+            "userId": "user-alice",
+            "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+          },
+          "oneToOnePeer": null,
+          "closed": false,
+          "connection": {
+            "userId": "user-bob",
+            "v": 3,
+            "binding": "valid",
+            "identityPublicKey": "OiA24zcv7IQ7kkbvydB9KYmbE3xK9GihzMRB3Wz96v8="
+          },
+          "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+          "verified": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+          "keyChange": null
+        },
+        {
+          "self": {
+            "userId": "user-alice",
+            "identityPublicKey": "oRNuJPRNhzyAaEomasOwmufaWtRM7yqdalz1KCDPGTU="
+          },
+          "oneToOnePeer": null,
+          "closed": false,
+          "connection": {
+            "userId": "user-bob",
+            "v": 3,
+            "binding": "valid",
+            "identityPublicKey": "OiA24zcv7IQ7kkbvydB9KYmbE3xK9GihzMRB3Wz96v8="
+          },
+          "pin": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+          "verified": "erp9qEPGBcWw7akk+/9urpEA6RAgOjzEJ1jW+O0yqFs=",
+          "keyChange": null
+        }
+      ],
+      "expected": [
+        {
+          "state": "held",
+          "share": false,
+          "pin": "changed"
+        },
+        {
+          "state": "held",
+          "share": false,
+          "pin": "none"
+        }
+      ]
+    }
+  ]
+}

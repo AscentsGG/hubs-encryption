@@ -1,0 +1,39 @@
+[package]
+name = "hubs-mls"
+version = "0.1.0"
+description = "Hubs private messages: MLS (RFC 9420) on mls-rs, the Hubs device credential, message franking and the key package policy"
+edition.workspace = true
+rust-version.workspace = true
+license = "AGPL-3.0-only"
+publish.workspace = true
+
+[lib]
+name = "hubs_mls"
+# staticlib for the iOS and macOS XCFramework, lib for the Rust tests, the
+# FFI crate and bindgen.
+crate-type = ["staticlib", "lib"]
+
+[dependencies]
+# MLS. Default features off: no rayon, no X.509, no PSKs, no proposals by
+# reference. Hubs uses basic credentials and commits with inline proposals.
+mls-rs = { version = "=0.56.0", default-features = false, features = ["std", "private_message", "out_of_order", "prior_epoch", "tree_index", "fast_serialize"] }
+mls-rs-core = { version = "=0.27.0", default-features = false, features = ["std"] }
+mls-rs-crypto-rustcrypto = { version = "=0.22.1", default-features = false, features = ["std"] }
+uniffi = { version = "=0.32.2", default-features = false }
+# Already a dependency of mls-rs-crypto-rustcrypto (same version). Turns a
+# 32-byte Ed25519 seed or a PKCS#8 key into the provider's key form, and
+# verifies device certificates strictly.
+ed25519-dalek = { version = "=2.2.0", default-features = false, features = ["std"] }
+# Writes the credential, the message payload and the franking bytes exactly
+# as JSON.stringify does in the TypeScript implementation.
+serde_json = { version = "=1.0.154", default-features = false, features = ["std"] }
+# Already a dependency of the RustCrypto provider (through pem-rfc7468).
+# Constant-time base64 for the credential, the payload and key package ids.
+base64ct = { version = "=1.8.3", default-features = false, features = ["alloc"] }
+# Already a dependency of mls-rs. Secret buffers in the storage layer are
+# wiped on drop.
+zeroize = { version = "=1.9.1", default-features = false, features = ["alloc"] }
+
+[dev-dependencies]
+# Already a dependency of mls-rs. Reads the hex in the test vector files.
+hex = { version = "=0.4.3", default-features = false, features = ["std"] }

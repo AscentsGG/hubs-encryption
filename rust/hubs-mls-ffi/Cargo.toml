@@ -1,0 +1,29 @@
+# A small C ABI over hubs-mls that takes and returns JSON. The Hubs Windows
+# app loads it from .NET. The app's build runs cargo for this crate and
+# copies the library next to the app.
+[package]
+name = "hubs-mls-ffi"
+version = "0.1.0"
+description = "Hubs private messages for Windows: a JSON C ABI over hubs-mls"
+edition.workspace = true
+rust-version.workspace = true
+license = "AGPL-3.0-only"
+publish.workspace = true
+
+[lib]
+name = "hubs_mls_ffi"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+hubs-mls = { path = "../hubs-mls" }
+# The same pinned versions as hubs-mls.
+mls-rs = { version = "=0.56.0", default-features = false, features = ["std", "private_message", "out_of_order", "prior_epoch", "tree_index", "fast_serialize"] }
+mls-rs-core = { version = "=0.27.0", default-features = false, features = ["std"] }
+mls-rs-crypto-rustcrypto = { version = "=0.22.1", default-features = false, features = ["std"] }
+# Already dependencies of the RustCrypto provider: Ed25519 signing and X25519
+# public keys for the device link. No primitive is implemented here.
+ed25519-dalek = { version = "=2.2.0", default-features = false, features = ["std"] }
+x25519-dalek = { version = "=2.0.1", default-features = false, features = ["static_secrets"] }
+serde_json = { version = "=1.0.154", default-features = false, features = ["std"] }
+base64ct = { version = "=1.8.3", default-features = false, features = ["alloc"] }
+zeroize = { version = "=1.9.1", default-features = false, features = ["alloc"] }

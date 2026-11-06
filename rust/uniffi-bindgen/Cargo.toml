@@ -1,0 +1,17 @@
+# Host-only tool that generates the Swift and Kotlin bindings from the built
+# hubs-mls library. It is never linked into an app.
+[package]
+name = "uniffi-bindgen"
+version = "0.1.0"
+description = "Generates the Swift and Kotlin bindings for hubs-mls"
+edition.workspace = true
+rust-version.workspace = true
+license = "AGPL-3.0-only"
+publish.workspace = true
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "src/main.rs"
+
+[dependencies]
+uniffi = { version = "=0.32.2", features = ["cli"] }

@@ -1,0 +1,8 @@
+{
+  "note": "Open wire with linkPrivateKey and info, and you get innerHex (the bundle inner layer from vectors.json). Made once with the website engine; HPKE suite 1: DHKEM(X25519, HKDF-SHA256), HKDF-SHA256, AES-128-GCM.",
+  "info": "hubs private dms link v2",
+  "linkPublicKey": "VJMIZ6bMl+vXXiZKqTKZGmybwEV6wf8eAyGKUYUCpzQ=",
+  "linkPrivateKey": "4IypsraW2D2ZNodsAPE/3Ie/brDRgDrSymK0Qi/nz2M=",
+  "wire": "{\"v\":2,\"enc\":\"MVrDD7G2L55jO+gdy/3KAOI0RGvK9Co5+z4pEkK462I=\",\"ct\":\"G85O4DLk31foMjdfXHrFTW2CnatcbtLHiFB5t+6O+hATfyCSSIy5mZDM/lP9QM/kTS30KP8VeqyJK6rOYhAodIJW3VEYuw==\"}",
+  "innerHex": "000102030405060708090a0b10fa8f1a8e7510ff948ee609b1df34105490be2b7313ea1b3bacc9558fb5775d3b927d7e42d527a9ae65"
+}

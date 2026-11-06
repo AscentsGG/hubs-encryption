@@ -1,0 +1,99 @@
+{
+  "note": "Known answers for the Hubs-specific constructions around MLS and encrypted calls. Every key here is a test key made for these vectors (the identity seed is RFC 8032 section 7.1 test 1); none is used anywhere real. Regenerate only on a deliberate format change; typescript/test/vectors.test.ts checks every entry.",
+  "deviceCertificate": {
+    "userId": "u_alice",
+    "deviceId": "device_alice_1",
+    "identityPrivateSeedHex": "9d61b19deffd5a60ba844af492ec2cc44449c5697b326919703bac031cae7f60",
+    "identityPublicKeyHex": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+    "devicePublicKeyHex": "3d4017c3e843895a92b70aa74d1b7ebc9c982ccf2ec4968cc0cd55f12af4660c",
+    "bodyHex": "68756273207072697661746520646d732064657669636520763100755f616c696365006465766963655f616c6963655f31003d4017c3e843895a92b70aa74d1b7ebc9c982ccf2ec4968cc0cd55f12af4660c",
+    "ed25519SignatureHex": "ab12cbf40c8eaf34458f36804991302d6285200d4fd70ac5a8b0ca1829782f0aa163d73c8fbc89a88150223caec011b69cdb53fb1e579e73c6530df962a5e703",
+    "verifies": true
+  },
+  "safetyCode": {
+    "a": {
+      "userId": "u_alice",
+      "identityPublicKey": "11qYAYKxCrfVS/7TyWQHOg7hcvPapiMlrwIaaPcHURo="
+    },
+    "b": {
+      "userId": "u_bob",
+      "identityPublicKey": "PUAXw+hDiVqStwqnTRt+vJyYLM8uxJaMwM1V8Sr0Zgw="
+    },
+    "code": "58629 27837 89290 09708 60400 64873 14887 29047 84384 21141 29572 87842"
+  },
+  "link": {
+    "publicKey": "PUAXw+hDiVqStwqnTRt+vJyYLM8uxJaMwM1V8Sr0Zgw=",
+    "code": "712bb2f394e0",
+    "check": "385551"
+  },
+  "linkSeal": {
+    "privateKey": "6C1bIxIvPxkCq2uS3JHLyr0rZpqYSW/MseR5XLWqfXw=",
+    "publicKey": "0mndKC7T9Pp7fNSIBTDpalz2R/Lr0nMnbFLo6NcoviY=",
+    "sealed": "{\"enc\":\"GFqTs9MVlK9E3lZd+Cu7QF/8NT53HsxReKpcinVCE1s=\",\"ct\":\"YE+30niDnZ71ML6zlB1PMEGyoVirbUzLDzCxTh5Bo8wdmsjOAGKWtr3KKC07BJEKF1pjYVvmRLA+lvuKIuhDxznl0xcd5zZFmHLqJ4IcD5iXbpOBRkLCo/VnXAmIw0a0IsodPIb72ErJ95T2KBnxPKYRD9maVOOxOB8TuXoCOTnMVIRCzUUIbLO32cmmBrAUIGhMS2kUpuQ1aAw9awCk0gUUwo+clHVUoDKslFMsWcvS7UdZm/UUxfFI4wlAovP9BaqatVMsoVTRIQZzl/KysjG9TXa5U6TvyV66wX1TyHeRW9JIKzrMmzVyno56tg==\"}",
+    "opensTo": {
+      "v": 1,
+      "userId": "u_alice",
+      "identity": {
+        "publicKey": "11qYAYKxCrfVS/7TyWQHOg7hcvPapiMlrwIaaPcHURo=",
+        "signKey": "nWGxne/9WmC6hEr0kuwsxERJxWl7MmkZcDusAxyuf2A="
+      },
+      "trusted": {
+        "u_bob": "PUAXw+hDiVqStwqnTRt+vJyYLM8uxJaMwM1V8Sr0Zgw="
+      }
+    }
+  },
+  "franking": {
+    "payload": {
+      "v": 1,
+      "id": "m_0001",
+      "kind": "text",
+      "body": "Meet at the north gate at six.",
+      "sentAt": 1760000000000,
+      "expiresInSeconds": 604800,
+      "userId": "u_alice",
+      "deviceId": "device_alice_1",
+      "frankingKey": "ERERERERERERERERERERERERERERERERERERERERERE="
+    },
+    "canonicalBytesUtf8": "[\"hubs private dms message v1\",1,\"m_0001\",\"text\",\"Meet at the north gate at six.\",1760000000000,604800,\"u_alice\",\"device_alice_1\"]",
+    "commitmentBase64": "4Ar9AcJA8LbXssNHIIRGtBbrbzS4g+FDoxrut2lXe6g=",
+    "stampKeyHex": "2222222222222222222222222222222222222222222222222222222222222222",
+    "stampInput": {
+      "commitment": "4Ar9AcJA8LbXssNHIIRGtBbrbzS4g+FDoxrut2lXe6g=",
+      "senderUserId": "u_alice",
+      "conversationId": "4f0e2d1c-6a7b-4c8d-9e0f-112233445566",
+      "stampedAt": "2026-10-12T12:00:00.000Z"
+    },
+    "stampBody": "[\"hubs private dms stamp v1\",\"4Ar9AcJA8LbXssNHIIRGtBbrbzS4g+FDoxrut2lXe6g=\",\"u_alice\",\"4f0e2d1c-6a7b-4c8d-9e0f-112233445566\",\"2026-10-12T12:00:00.000Z\"]",
+    "stampBase64": "BHTBvKGfaFjdyo9GCzFGxfqYmyIf8z1D4sy5wexa0bw="
+  },
+  "backup": {
+    "prfOutputHex": "4242424242424242424242424242424242424242424242424242424242424242",
+    "userId": "u_alice",
+    "sealed": {
+      "salt": "c/gJNHjr7bV1DAvI5vRJ8sznijmBHKEc+ffscPIA9fc=",
+      "nonce": "ZbAs1PK7J09guv14",
+      "ciphertext": "UzGLJ6J83BiqPObr6hA2IbuHAt0OMlSY/gC/ezK1zTCPUd/XH/4BPlLj7WcZVnA2gjv9Druk3u8HPZBU41kucYA5CWfcJi0cyIu30tU6ckP0eeW6QzdOTvitUcy4YIpIES0SbL+z6LPLLU8vkU/7vCx/0hu6s7UdulhaYsIxDQSfcnzMY4YF+J71eGJL5v9ocX8Pw9tuunyS8rNrJaCgbzIM0jFY8fpadgTECLEErx6GqP6PJMzjCw0cU29MplP4LYi5QE39HgZnPcA0xrlf+fcjlgsLMYoQIL9IC/BgtJLZl8Yjits6YN1/dTw1/g=="
+    },
+    "opensTo": {
+      "v": 1,
+      "userId": "u_alice",
+      "identity": {
+        "publicKey": "11qYAYKxCrfVS/7TyWQHOg7hcvPapiMlrwIaaPcHURo=",
+        "signKey": "nWGxne/9WmC6hEr0kuwsxERJxWl7MmkZcDusAxyuf2A="
+      },
+      "trusted": {
+        "u_bob": "PUAXw+hDiVqStwqnTRt+vJyYLM8uxJaMwM1V8Sr0Zgw="
+      }
+    }
+  },
+  "callCode": {
+    "epoch": "6f1c8a2e-3b4d-4e5f-8a9b-0c1d2e3f4a5b",
+    "publicKeys": [
+      "BOyUKP9mvO6rtA7TV52nZ2HqXFeW8gxvTw0vGBsU6xJ8zIb7YvvKYuxoNHOTMbbTQb2D6Zbmy9eCFtbs0r/yE6s=",
+      "BHnF7G2dNfBz/4X3G0cR9vPk+3m2iU1Yb5f0QqkHn6vYb3xS0K4h1Z9T8m2pWc7Lk5Dg4e3Fh2Jq1Rs0Tu9Vw8A="
+    ],
+    "callKeyHex": "00000000000000000000000000000000ffffffffffffffffffffffffffffffff",
+    "code": "3098 2379 3450",
+    "wrapContext": "hubs-call-key\ndm-channel-1\n6f1c8a2e-3b4d-4e5f-8a9b-0c1d2e3f4a5b"
+  }
+}

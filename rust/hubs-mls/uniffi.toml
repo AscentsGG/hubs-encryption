@@ -1,0 +1,7 @@
+# Swift bindings: the generated Swift goes in a Swift package named HubsMLS,
+# and the C layer in the HubsMLSFFI framework inside the XCFramework, which
+# carries its own module map.
+[bindings.swift]
+module_name = "HubsMLS"
+ffi_module_name = "HubsMLSFFI"
+generate_module_map = false
