@@ -1,0 +1,8 @@
+# The exact Rust that builds this workspace, so anyone can rebuild the apps'
+# encryption libraries from this repository and get the same bytes: the
+# Windows app's hubs_mls_ffi.dll (hubs-mls-ffi/REPRODUCIBLE.md) and the Mac
+# and iPhone apps' framework. Changing it changes those libraries, so a
+# release that moves it says so in its notes.
+[toolchain]
+channel = "1.99.1"
+profile = "minimal"

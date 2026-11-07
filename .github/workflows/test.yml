@@ -1,5 +1,6 @@
 # Runs the TypeScript tests, the Rust tests (with the live check against the
 # TypeScript implementation) and cargo audit on every push and pull request,
+# with the Rust that rust/rust-toolchain.toml pins,
 # and once a day rebuilds the encryption files and checks that thehubs.gg
 # serves exactly those bytes. Actions are pinned to full commit hashes. No
 # secrets are used.
@@ -46,8 +47,8 @@ jobs:
         run: npm ci
       - name: Install Rust
         run: |
-          rustup toolchain install 1.97.0 --profile minimal
-          rustup default 1.97.0
+          rustup toolchain install 1.99.1 --profile minimal
+          rustup default 1.99.1
       - name: Test
         working-directory: rust
         run: cargo test --workspace --locked
@@ -60,8 +61,8 @@ jobs:
           persist-credentials: false
       - name: Install Rust and cargo-audit
         run: |
-          rustup toolchain install 1.97.0 --profile minimal
-          rustup default 1.97.0
+          rustup toolchain install 1.99.1 --profile minimal
+          rustup default 1.99.1
           cargo install cargo-audit --version 0.22.2 --locked
       - name: Audit
         working-directory: rust
