@@ -12,7 +12,7 @@ Check out the commit the release names, then from the repository's top:
 rust/hubs-mls/build-reproducible.sh
 ```
 
-You need a Mac with rustup, and Apple's Command Line Tools 26.4, or an Xcode with the same linker and macOS SDK (the script names both). The script gets the exact Rust itself and any folder works. It uses `/Applications/Xcode_26.4.1.app` when it is installed, as on GitHub's macOS runners, the Command Line Tools otherwise, or whatever `DEVELOPER_DIR` names, and it stops if the linker or the SDK is not the pinned one. It prints where the framework is, under `rust/target/mac`.
+You need a Mac with rustup, and Apple's Command Line Tools 26.4 or Xcode 26.4.1. Both have the linker ld-1266.8, and their macOS 26.4 SDKs (builds 25E236 and 25E251) give the same library. The script gets the exact Rust itself and any folder works. It uses `/Applications/Xcode_26.4.1.app` when it is installed, as on GitHub's macOS runners, the Command Line Tools otherwise, or whatever `DEVELOPER_DIR` names, and it stops if the linker or the SDK is not the pinned one. It prints where the framework is, under `rust/target/mac`.
 
 To see for yourself that the build doesn't depend on where it runs, `rust/hubs-mls/build-reproducible.sh --twice` builds it in two folders and checks that every file comes out the same.
 
@@ -49,7 +49,7 @@ We built the library again with each of the first five changed, one at a time, a
 | Pin | Where | Without it |
 |---|---|---|
 | Rust 1.99.1 | `rust/rust-toolchain.toml` | Another compiler is another library: with Rust 1.97.0, about 2.6 million bytes differed |
-| The linker ld-1266.8 and the macOS SDK 25E236, from Command Line Tools 26.4 | `build-reproducible.sh` | The linker writes the file and the SDK's system libraries are linked into it: with Xcode 27.2's linker and SDK, about 123,000 bytes differed |
+| The linker ld-1266.8 and the macOS 26.4 SDK, build 25E236 (Command Line Tools 26.4) or 25E251 (Xcode 26.4.1) | `build-reproducible.sh` | The linker writes the file and the SDK's system libraries are linked into it: with Xcode 27.2's linker and SDK, about 123,000 bytes differed. The two 26.4 SDK builds were measured identical: Xcode 26.4.1 on GitHub's macOS runner, with 25E251, built the same SHA-256 as Command Line Tools 26.4 with 25E236 |
 | The two `--remap-path-prefix` flags | `build-reproducible.sh` | Your folders end up in the panic messages: about 131,000 bytes differed in a build from another folder |
 | `-Wl,-S` (no debug map) | `build-reproducible.sh` | A build from another folder got a different UUID in each architecture: 96 bytes differed, the UUIDs and the page hashes over them |
 | macOS 15.0 as the minimum | `build-reproducible.sh` | The minimum macOS is written into each architecture's header: with 14.0, 98 bytes differed |

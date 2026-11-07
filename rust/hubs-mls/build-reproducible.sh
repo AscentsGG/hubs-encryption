@@ -4,8 +4,8 @@
 # Mac release build runs this very script from a checkout of this repository at
 # the commit its release notes name, and so can anyone checking that release.
 #
-# Needs rustup, and Apple's Command Line Tools 26.4, or an Xcode with the same
-# linker and macOS SDK. REPRODUCIBLE.md, beside this script, says how to
+# Needs rustup, and Apple's Command Line Tools 26.4 or Xcode 26.4.1, which have
+# the same linker and give the same library. REPRODUCIBLE.md, beside this script, says how to
 # compare the result with a release and what each pin below is for. Everything
 # pinned here ends up in the library, so changing any of it changes the library.
 #
@@ -20,9 +20,11 @@ rust=$(sed -n 's/^channel = "\(.*\)"/\1/p' $workspace/rust-toolchain.toml)
 targets=(aarch64-apple-darwin x86_64-apple-darwin)
 name=HubsMLSFFI
 min_macos=15.0
-# The linker and the SDK go into the library: those of Command Line Tools 26.4.
+# The linker and the SDK go into the library. The macOS 26.4 SDK in Command Line
+# Tools 26.4 (25E236) and the one in Xcode 26.4.1 (25E251, on GitHub's macOS
+# runners) are different builds that give the same library.
 linker=ld-1266.8
-sdk_build=25E236
+sdk_builds=(25E236 25E251)
 
 if [[ ${1:-} == --twice ]]; then
   # The proof: the whole repository copied to two folders of different names
@@ -65,8 +67,8 @@ if [[ -z ${DEVELOPER_DIR:-} ]]; then
 fi
 found_linker=$(xcrun ld -v 2>&1 | sed -n 's/.*PROJECT:\(ld-[0-9.]*\).*/\1/p' | head -1)
 found_sdk=$(xcrun --sdk macosx --show-sdk-build-version)
-if [[ $found_linker != $linker || $found_sdk != $sdk_build ]]; then
-  print -u2 "This needs $linker and the macOS SDK $sdk_build (Command Line Tools 26.4)."
+if [[ $found_linker != $linker || ${sdk_builds[(Ie)$found_sdk]} -eq 0 ]]; then
+  print -u2 "This needs $linker and the macOS SDK ${(j: or :)sdk_builds} (Command Line Tools 26.4 or Xcode 26.4.1)."
   print -u2 "$DEVELOPER_DIR has $found_linker and SDK $found_sdk. Set DEVELOPER_DIR to one that matches."
   exit 1
 fi
