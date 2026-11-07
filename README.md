@@ -101,6 +101,10 @@ It ends with "Your rebuild matches this release" when every byte is the same. Th
 
 Hubs for Windows does its encryption in `hubs_mls_ffi.dll`, built from `rust/` in this repository with the Rust that `rust/rust-toolchain.toml` pins. Windows releases built from this repository name the commit and the library's Authenticode digest in their notes. [rust/hubs-mls-ffi/REPRODUCIBLE.md](rust/hubs-mls-ffi/REPRODUCIBLE.md) shows how to rebuild it on Windows and compare it with a release. The comparison needs only Python, on any system.
 
+### Rebuild the Mac app's encryption library
+
+Hubs for Mac does its encryption in `HubsMLSFFI.framework`, built from `rust/hubs-mls` in this repository with the same pinned Rust. Mac releases built from this repository name the commit and the library's code digest for each architecture in their notes. [rust/hubs-mls/REPRODUCIBLE.md](rust/hubs-mls/REPRODUCIBLE.md) shows how to rebuild it on a Mac and compare it with a release. The comparison needs only Python, on any system.
+
 [docs/release-fingerprints.md](docs/release-fingerprints.md) explains what a statement covers, what it does not, and how to check a signature with OpenSSL alone.
 
 ## Reporting a security problem

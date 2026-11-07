@@ -1,9 +1,10 @@
 # Runs the TypeScript tests, the Rust tests (with the live check against the
 # TypeScript implementation) and cargo audit on every push and pull request,
-# with the Rust that rust/rust-toolchain.toml pins,
-# and once a day rebuilds the encryption files and checks that thehubs.gg
-# serves exactly those bytes. Actions are pinned to full commit hashes. No
-# secrets are used.
+# with the Rust that rust/rust-toolchain.toml pins. It also builds the Mac
+# app's encryption library twice in two folders on a Mac and checks they are
+# the same, and once a day rebuilds the encryption files and checks that
+# thehubs.gg serves exactly those bytes. Actions are pinned to full commit
+# hashes. No secrets are used.
 name: test
 
 on:
@@ -87,3 +88,17 @@ jobs:
           npm run build
       - name: Compare with the release thehubs.gg runs
         run: node tools/check-release.mjs --current --rebuilt typescript/dist
+
+  mac-library:
+    # The Mac app's encryption library (rust/hubs-mls/REPRODUCIBLE.md), built on
+    # GitHub's macOS runner: once to print the linker, SDK and SHA-256, then in
+    # two folders of different names to show the folder doesn't matter.
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Build it
+        run: rust/hubs-mls/build-reproducible.sh
+      - name: Build it in two more folders and compare
+        run: rust/hubs-mls/build-reproducible.sh --twice
