@@ -3,7 +3,8 @@
 # with the Rust that rust/rust-toolchain.toml pins. It also builds the Mac
 # app's encryption library twice in two folders on a Mac and checks they are
 # the same, and once a day rebuilds the encryption files and checks that
-# thehubs.gg serves exactly those bytes. Actions are pinned to full commit
+# thehubs.gg serves exactly those bytes, and rebuilds the current Mac release's
+# library and compares it with the download. Actions are pinned to full commit
 # hashes. No secrets are used.
 name: test
 
@@ -102,3 +103,16 @@ jobs:
         run: rust/hubs-mls/build-reproducible.sh
       - name: Build it in two more folders and compare
         run: rust/hubs-mls/build-reproducible.sh --twice
+
+  mac-release:
+    # The Hubs for Mac release thehubs.gg serves now: its signed statement in
+    # hubs-releases, a rebuild at the commit the statement names, and a
+    # comparison with the download (tools/check-mac-release.sh).
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Check the current Mac release
+        run: tools/check-mac-release.sh

@@ -99,11 +99,11 @@ It ends with "Your rebuild matches this release" when every byte is the same. Th
 
 ### Rebuild the Windows app's encryption library
 
-Hubs for Windows does its encryption in `hubs_mls_ffi.dll`, built from `rust/` in this repository with the Rust that `rust/rust-toolchain.toml` pins. Windows releases built from this repository name the commit and the library's Authenticode digest in their notes. [rust/hubs-mls-ffi/REPRODUCIBLE.md](rust/hubs-mls-ffi/REPRODUCIBLE.md) shows how to rebuild it on Windows and compare it with a release. The comparison needs only Python, on any system.
+Hubs for Windows does its encryption in `hubs_mls_ffi.dll`, built from `rust/` in this repository with the Rust that `rust/rust-toolchain.toml` pins. Windows releases built from this repository get the same kind of signed statement (`apps/windows/<version>.json`), naming the commit and the library's Authenticode digest. [rust/hubs-mls-ffi/REPRODUCIBLE.md](rust/hubs-mls-ffi/REPRODUCIBLE.md) shows how to rebuild it on Windows and compare it with a release. The comparison needs only Python, on any system.
 
 ### Rebuild the Mac app's encryption library
 
-Hubs for Mac does its encryption in `HubsMLSFFI.framework`, built from `rust/hubs-mls` in this repository with the same pinned Rust. Mac releases built from this repository name the commit and the library's code digest for each architecture in their notes. [rust/hubs-mls/REPRODUCIBLE.md](rust/hubs-mls/REPRODUCIBLE.md) shows how to rebuild it on a Mac and compare it with a release. The comparison needs only Python, on any system.
+Hubs for Mac does its encryption in `HubsMLSFFI.framework`, built from `rust/hubs-mls` in this repository with the same pinned Rust. Each Mac release built from this repository, starting with 0.1.69, has a signed statement in [hubs-releases](https://github.com/AscentsGG/hubs-releases) (`apps/mac/<version>.json`) that names the commit and the library's code digest for each architecture. [rust/hubs-mls/REPRODUCIBLE.md](rust/hubs-mls/REPRODUCIBLE.md) shows how to rebuild it on a Mac and compare it with a release, and the comparison needs only Python, on any system. `tools/check-mac-release.sh` does all of it for the release thehubs.gg serves now, and the `mac-release` job runs it every day.
 
 [docs/release-fingerprints.md](docs/release-fingerprints.md) explains what a statement covers, what it does not, and how to check a signature with OpenSSL alone.
 
