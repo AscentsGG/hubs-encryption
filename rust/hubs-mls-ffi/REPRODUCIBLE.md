@@ -24,7 +24,9 @@ This part needs only Python 3, on any system:
 python3 rust/hubs-mls-ffi/compare-dll.py <your rebuild> <the release's ZIP, or the DLL from it>
 ```
 
-It prints the Authenticode digest of each file and says whether they match. The release's notes give the same digest.
+It prints the Authenticode digest of each file and says whether they match. The release's notes give the same digest, and so does its signed statement in [hubs-releases](https://github.com/AscentsGG/hubs-releases) (`apps/windows/<version>.json`, from 0.3.51 on).
+
+On a Windows PC, `pwsh tools/check-windows-release.ps1` does every step for the release thehubs.gg serves now: it checks the statement's signature, rebuilds at the commit the statement names, downloads the release and compares. The `windows-release` job in this repository runs it every day.
 
 ## Why not a plain SHA-256
 

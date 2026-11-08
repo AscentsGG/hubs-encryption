@@ -99,7 +99,7 @@ It ends with "Your rebuild matches this release" when every byte is the same. Th
 
 ### Rebuild the Windows app's encryption library
 
-Hubs for Windows does its encryption in `hubs_mls_ffi.dll`, built from `rust/` in this repository with the Rust that `rust/rust-toolchain.toml` pins. Windows releases built from this repository get the same kind of signed statement (`apps/windows/<version>.json`), naming the commit and the library's Authenticode digest. [rust/hubs-mls-ffi/REPRODUCIBLE.md](rust/hubs-mls-ffi/REPRODUCIBLE.md) shows how to rebuild it on Windows and compare it with a release. The comparison needs only Python, on any system.
+Hubs for Windows does its encryption in `hubs_mls_ffi.dll`, built from `rust/` in this repository with the Rust that `rust/rust-toolchain.toml` pins. Each Windows release built from this repository, starting with 0.3.51, has a signed statement in [hubs-releases](https://github.com/AscentsGG/hubs-releases) (`apps/windows/<version>.json`) that names the commit and the library's Authenticode digest. [rust/hubs-mls-ffi/REPRODUCIBLE.md](rust/hubs-mls-ffi/REPRODUCIBLE.md) shows how to rebuild it on Windows and compare it with a release. The comparison needs only Python, on any system. `tools/check-windows-release.ps1` does all of it for the release thehubs.gg serves now, and the `windows-release` job runs it every day.
 
 ### Rebuild the Mac app's encryption library
 
