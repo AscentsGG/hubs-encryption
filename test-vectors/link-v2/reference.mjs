@@ -357,4 +357,4 @@ async function main() {
   process.stdout.write(`${JSON.stringify(vectors, null, 2)}\n`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) main();
+if (import.meta.url === `file://${process.argv[1]}`) await main();
